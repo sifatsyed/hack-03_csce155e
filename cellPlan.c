@@ -37,14 +37,14 @@
   printf("Average daily use: %f GB/day\n", averageUsePerDay);
 
   if(averageUsePerDay>averageDailyUse) {
-    printf("You are EXCEEDING your average daily use (%f GB/day).\n", averageDailyUse);
-    printf("Continuing this high usage, you will exceed your data plan by %f GB.\n", planExceeded);
-    printf("To stay below your data plan use no more than %f GB per day\n",warningGBUse);
+    printf("You are EXCEEDING your average daily use (%.2f GB/day).\n", averageDailyUse);
+    printf("Continuing this high usage, you will exceed your data plan by .2%f GB.\n", planExceeded);
+    printf("To stay below your data plan use no more than %.2f GB per day\n",warningGBUse);
 }
  /*else if(averageUsePerDay<averageDailyUse) {
-    printf("You are DECEEDING your average daily use (%f GB/day).\n", averageDailyUse);
-    printf("Continuing this low usage, you will deceed your data plan by %f GB.\n", planDeceeded);
-    printf("To stay at right limit of your data plan, use atleast %f GB per day\n",warningShortGBUse);
+    printf("You are DECEEDING your average daily use (%.2f GB/day).\n", averageDailyUse);
+    printf("Continuing this low usage, you will deceed your data plan by %.2f GB.\n", planDeceeded);
+    printf("To stay at right limit of your data plan, use atleast %.2f GB per day\n",warningShortGBUse);
 
 }*/ else {
   printf("You are using your plan at the right average daily use, so no need to worry.\n");
