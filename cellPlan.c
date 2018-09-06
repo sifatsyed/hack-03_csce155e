@@ -15,7 +15,7 @@
 
   int dayNumber, daysLeft;
   double numberOfGBPlan, totalGBUsed, averageDailyUse, averageUsePerDay, planExceededCalculation, planExceeded,
-        warningGBUse, totalGBULeft, atLeastUse, planDeceeded, warningShortGBUse;
+        warningGBUse, totalGBLeft, atLeastUse, planDeceeded, warningShortGBUse;
 
   if(argc!=4){
     printf("Error:Provide the correct number of data\n");
@@ -30,7 +30,8 @@
    averageDailyUse = numberOfGBPlan/30 ;
    planExceededCalculation = numberOfGBPlan - totalGBUsed + (daysLeft*averageUsePerDay);
    planExceeded = planExceededCalculation - numberOfGBPlan;
-   warningGBUse = totalGBULeft/daysLeft;
+   totalGBLeft = numberOfGBPlan- totalGBUsed;
+   warningGBUse = totalGBLeft/daysLeft;
 
   printf("%d days used, %d days remaining.\n",dayNumber, daysLeft);
   printf("Average daily use: %f GB/day\n", averageUsePerDay);
@@ -46,5 +47,6 @@
     printf("To stay at right limit of your data plan, use atleast %f GB per day\n",warningShortGBUse);
 
 }*/ else {
-  printf("You are using your plan at the right average daily use, so no need to worry.\n", );
+  printf("You are using your plan at the right average daily use, so no need to worry.\n");
+}
 }
